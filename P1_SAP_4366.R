@@ -68,9 +68,9 @@ softball_new <- softball |>
      y = "Double Support %") +
    theme_bw()
  
- # Number of Sports - Performance 
+ # Throwing Accuracy - Performance 
  softball_plot |> 
-   ggplot(aes(x = Score, y = Num_Sports)) +
+   ggplot(aes(x = Score, y = Throwing_Acc)) +
    geom_point() +
    geom_jitter()+
    geom_smooth(method = "lm", se = FALSE, color = "coral3") +
