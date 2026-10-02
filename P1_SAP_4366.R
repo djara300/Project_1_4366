@@ -37,9 +37,11 @@ softball_new <- softball |>
  softball_plot |> 
   ggplot(aes(x = Score, y = Baserunning)) +
   geom_point() +
-  geom_smooth(method = "lm", se = FALSE, color = "blue") +
+  geom_smooth(method = "lm", se = FALSE, color = "red1") +
   facet_wrap(~ Psychosocial, ncol = 2) +
   labs(
+    title = "Psychosocial Scores v. Baserunning Time",
+    subtitle = "Every point represents one survey respondent; n = 17",
     x = "Psychosocial scale score (1-5)",
     y = "Base-running time (seconds; lower = faster)"
   ) +
@@ -49,9 +51,11 @@ softball_new <- softball |>
  softball_plot |> 
    ggplot(aes(x = Score, y = SL_3D)) +
    geom_point() +
-   geom_smooth(method = "lm", se = FALSE, color = "blue") +
+   geom_smooth(method = "lm", se = FALSE, color = "red1") +
    facet_wrap(~ Psychosocial, ncol = 2) +
    labs(
+     title = "Psychosocial Scores v. Single Leg Balance",
+     subtitle = "Every point represents one survey respondent; n = 18",
      x = "Psychosocial scale score (1-5)",
      y = "Single-Leg RMS (mm/s^2)"
    ) +
@@ -61,9 +65,11 @@ softball_new <- softball |>
  softball_plot |> 
    ggplot(aes(x = Score, y = Double_Support)) +
    geom_point() +
-   geom_smooth(method = "lm", se = FALSE, color = "coral3") +
+   geom_smooth(method = "lm", se = FALSE, color = "red1") +
    facet_wrap(~ Psychosocial, ncol = 2) +
    labs(
+     title = "Psychosocial Scores v. Double Support %",
+     subtitle = "Every point represents one survey respondent; n = 17",
      x = "Psychosocial scale score (1-5)",
      y = "Double Support %") +
    theme_bw()
@@ -73,9 +79,11 @@ softball_new <- softball |>
    ggplot(aes(x = Score, y = Throwing_Acc)) +
    geom_point() +
    geom_jitter()+
-   geom_smooth(method = "lm", se = FALSE, color = "coral3") +
+   geom_smooth(method = "lm", se = FALSE, color = "red1") +
    facet_wrap(~ Psychosocial, ncol = 2) +
    labs(
+     title = "Psychosocial Scores v. Throwing Accuracay",
+     subtitle = "Every point represents one survey respondent; n = 18",
      x = "Psychosocial scale score (1-5)",
-     y = "Num Sports") +
+     y = "Throwing Accuracy (# target hit out of 10)") +
    theme_bw()
